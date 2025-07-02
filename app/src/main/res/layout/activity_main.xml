@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tv0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Calculadora avanzada"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Primer número -->
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:hint="Número 1"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tv0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Segundo número -->
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Número 2 (opcional)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/et1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Grupo de opciones -->
+    <RadioGroup
+        android:id="@+id/grupo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/et2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton android:id="@+id/r1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Suma" />
+        <RadioButton android:id="@+id/r2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Resta" />
+        <RadioButton android:id="@+id/r3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Multiplicación" />
+        <RadioButton android:id="@+id/r4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="División" />
+        <RadioButton android:id="@+id/r5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Potencia" />
+        <RadioButton android:id="@+id/r6" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Raíz cuadrada" />
+        <RadioButton android:id="@+id/r7" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Seno" />
+        <RadioButton android:id="@+id/r8" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Coseno" />
+        <RadioButton android:id="@+id/r9" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tangente" />
+    </RadioGroup>
+
+    <!-- Botón Calcular -->
+    <Button
+        android:id="@+id/xbn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/grupo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Resultado -->
+    <TextView
+        android:id="@+id/xtv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="Resultado:"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/xbn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
